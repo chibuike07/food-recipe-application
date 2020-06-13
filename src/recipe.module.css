@@ -1,0 +1,47 @@
+.App {
+  width: 100%;
+  height: 80vh;
+}
+
+.search_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: darkgoldenrod;
+  height: 30vh;
+}
+
+.search_form input {
+  width: 30vw;
+  height: 6vh;
+  padding-left: 15px;
+  outline: none;
+}
+
+.search_button {
+  height: 7vh;
+  background-color: inherit;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+}
+
+.search_button:hover {
+  animation: splash 2s infinite;
+}
+
+@keyframes splash {
+  from {
+    background-color: inherit;
+  }
+  to {
+    background-color: rgb(194, 148, 31);
+  }
+}
+
+.previews {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
