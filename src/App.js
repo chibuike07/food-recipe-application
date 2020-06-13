@@ -43,16 +43,14 @@ const App = () => {
       </form>
       {recipes.map(({ recipe }) => {
         return (
-          <div className={previews}>
-            <Recipe
-              key={recipe.image}
-              title={recipe.label}
-              src={recipe.image}
-              ingredient={recipe.ingredientLines}
-              calories={recipe.calories}
-              url={recipe.url}
-            />
-          </div>
+          <Recipe
+            key={recipe.image}
+            title={recipe.label}
+            src={recipe.image}
+            ingredient={recipe.ingredientLines}
+            calories={recipe.calories}
+            url={recipe.url}
+          />
         );
       })}
     </div>
