@@ -1,6 +1,6 @@
 import React from "react";
 import CustomLink from "./CustomLink";
-import Styles from "./preview.module.css";
+import Styles from "./Styles/preview.module.css";
 const Recipe = ({ src, title, calories, ingredient, url }) => {
   const { preview_container } = Styles;
   return (

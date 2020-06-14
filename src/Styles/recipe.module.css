@@ -8,8 +8,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: darkgoldenrod;
-  height: 30vh;
+  background: repeating-linear-gradient(
+    rgba(184, 134, 11, 0.7),
+    rgba(245, 186, 50, 0.7)
+  );
+  height: 40vh;
 }
 
 .search_form input {
