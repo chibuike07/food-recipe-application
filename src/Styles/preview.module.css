@@ -1,6 +1,56 @@
 .preview_container {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-between; */
+  align-items: center;
   width: 100%;
   margin-top: 20px;
+}
+
+.items {
+  width: 50%;
+  padding: 10px;
+  background-color: rgb(89, 187, 190, 1);
+}
+.items h1 {
+  color: #fff;
+}
+.items img {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item_list {
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+}
+
+.item_list h2 {
+  animation: blink 10s infinite;
+  height: 5vh;
+}
+@keyframes blink {
+  from {
+    color: rgb(89, 187, 190, 1);
+    font: inherit;
+  }
+  to {
+    color: rgba(33, 170, 173, 1);
+    font: 20px;
+  }
+}
+.item_list ul {
+  display: none;
+  list-style: upper-alpha;
+  overflow-y: scroll;
+  height: 50vh;
+}
+.item_list ul li {
+  padding-top: 20px;
+}
+.item_list:hover ul {
+  color: blue;
+  display: block;
 }

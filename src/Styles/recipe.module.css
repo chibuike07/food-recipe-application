@@ -8,10 +8,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: repeating-linear-gradient(
-    rgba(184, 134, 11, 0.7),
-    rgba(245, 186, 50, 0.7)
-  );
+  background-color: rgba(33, 170, 173, 1);
   height: 40vh;
 }
 
@@ -20,8 +17,16 @@
   height: 6vh;
   padding-left: 15px;
   outline: none;
+  border-right: none;
 }
 
+.select {
+  width: 5vw;
+  height: 6.9vh;
+  border-left: none;
+  background-color: #fff;
+  outline: none;
+}
 .search_button {
   height: 7vh;
   background-color: inherit;
@@ -39,12 +44,6 @@
     background-color: inherit;
   }
   to {
-    background-color: rgb(194, 148, 31);
+    background-color: rgb(26, 129, 78);
   }
-}
-
-.previews {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
 }
