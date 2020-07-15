@@ -1,6 +1,14 @@
 import React from "react";
 
-const CustomInput = ({ type, name, id, onChange, value, placeholder }) => {
+const CustomInput = ({
+  type,
+  name,
+  id,
+  onChange,
+  value,
+  placeholder,
+  autocomplete
+}) => {
   return (
     <div>
       <input
@@ -10,6 +18,7 @@ const CustomInput = ({ type, name, id, onChange, value, placeholder }) => {
         value={value ? value : ""}
         onChange={onChange ? onChange : null}
         placeholder={placeholder ? placeholder : null}
+        autoComplete={autocomplete ? autocomplete : null}
       />
     </div>
   );

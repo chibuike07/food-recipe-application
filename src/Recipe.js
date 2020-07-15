@@ -1,7 +1,7 @@
 import React from "react";
 import CustomLink from "./CustomLink";
 import Styles from "./Styles/preview.module.css";
-const Recipe = ({ src, title, calories, ingredient, url }) => {
+const Recipe = ({ src, title, ingredient, url }) => {
   const { preview_container, items, item_list } = Styles;
   return (
     <div className={preview_container}>

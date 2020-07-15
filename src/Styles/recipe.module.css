@@ -21,8 +21,9 @@
 }
 
 .select {
-  width: 5vw;
-  height: 6.9vh;
+  width: 55px;
+  height: 7vh;
+  margin-top: 1px;
   border-left: none;
   background-color: #fff;
   outline: none;
@@ -44,6 +45,6 @@
     background-color: inherit;
   }
   to {
-    background-color: rgb(26, 129, 78);
+    background-color: rgb(89, 187, 190, 1);
   }
 }

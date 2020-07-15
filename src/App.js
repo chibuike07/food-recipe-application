@@ -7,15 +7,17 @@ const App = () => {
   const APP_ID = "6d6a83db";
   const APP_KEY = "2301e231e5cf4dc8ba58fb8966ba46d3";
   const [recipes, setRecipes] = useState([]);
-  const [foodSearch, setFooSearch] = useState({ foodSearch: "", select: "" });
+  const [foodSearch, setFooSearch] = useState("");
+  const [selectInput, setSelecOptions] = useState("");
   const [previewLimit, setPreviewLimit] = useState(["0", "10"]);
 
   const handleChange = ({ target }) => {
-    setFooSearch(() => ({ [target.name]: target.value }));
-    if (target.name === "select") {
-      let split = target.value.split("-");
-      setPreviewLimit(split);
-    }
+    setFooSearch(target.value);
+  };
+  const handleSelectChange = ({ target }) => {
+    setSelecOptions(target.value);
+    let split = target.value.split("-");
+    setPreviewLimit(split);
   };
   const handleSubmit = e => {
     e.preventDefault();
@@ -25,11 +27,10 @@ const App = () => {
     let from = Number(previewLimit[0]);
     let to = Number(previewLimit[1]);
     const response = await fetch(
-      `https://api.edamam.com/search?q=${foodSearch.foodSearch}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${from}&to=${to}`
+      `https://api.edamam.com/search?q=${foodSearch}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${from}&to=${to}`
     );
     const data = await response.json();
     setRecipes(data.hits);
-    // console.log(data.hits);
   };
 
   const { search_bar, search_form, App, search_button, select } = Styles;
@@ -40,14 +41,15 @@ const App = () => {
           className={search_bar}
           type={"text"}
           name={"foodSearch"}
-          value={foodSearch.foodSearch}
+          value={foodSearch}
           onChange={handleChange}
           placeholder={"eg food name , fruits name"}
+          autocomplete={"off"}
         />
         <select
           name="select"
-          value={foodSearch.select}
-          onChange={handleChange}
+          value={selectInput}
+          onChange={handleSelectChange}
           className={select}
         >
           {SelectOption &&
