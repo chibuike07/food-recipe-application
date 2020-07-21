@@ -53,3 +53,12 @@
   color: blue;
   display: block;
 }
+@media only screen and (max-width: 500px) {
+  .item_list {
+    height: 250px;
+    overflow-y: scroll;
+  }
+  .item_list h2 {
+    text-align: center;
+  }
+}

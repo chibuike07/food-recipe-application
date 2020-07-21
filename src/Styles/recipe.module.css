@@ -8,8 +8,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgba(33, 170, 173, 1);
-  height: 40vh;
+  background-image: linear-gradient(
+      rgba(33, 170, 173, 0.2),
+      rgba(12, 131, 133, 0.7)
+    ),
+    url("../images/recipeima.jpeg");
+  background-size: cover;
+  background-color: gold;
+  height: 60vh;
+  background-blend-mode: multiply;
 }
 
 .search_form input {
@@ -37,7 +44,7 @@
 }
 
 .search_button:hover {
-  animation: splash 2s infinite;
+  animation: splash 2s linear forwards;
 }
 
 @keyframes splash {
@@ -46,5 +53,38 @@
   }
   to {
     background-color: rgb(89, 187, 190, 1);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App {
+    height: 350px;
+  }
+  .search_form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+  }
+  .search_form input {
+    width: 250px;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 15px;
+  }
+  .select {
+    justify-content: flex-end;
+    transform: translate(100px, -47px);
+    background-color: #fff;
+    border-radius: 10px;
+    width: 70px;
+    height: 39px;
+  }
+  .search_button {
+    background-color: rgb(89, 187, 190, 1);
+    width: 150px;
+    border-radius: 10px;
+    outline: none;
+    height: 40px;
   }
 }
